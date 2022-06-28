@@ -1,0 +1,205 @@
+// app global css in SCSS form
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.fullcover {
+  width: 100%;
+  height: 100%;
+}
+
+.full-w {
+  width: 100%;
+}
+
+.extractor-page {
+  background-color: #cdedfd;
+  background-image: linear-gradient(
+    319deg,
+    #cdedfd 0%,
+    #ffec82 37%,
+    #ffcfd2 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header-content {
+    display: flex;
+    flex: 1 1;
+
+    .header-item {
+      flex: 1 1;
+    }
+
+    .tab-section {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .tab {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex: 6 1;
+
+    .image-list-container {
+      flex: 1 1;
+      .empty-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .empty-image-card {
+          background-color: $primary;
+          cursor: pointer;
+          padding: 2em;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .empty-image-image {
+          min-width: 300px;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1.5em;
+        }
+
+        .images-container {
+          display: flex;
+          flex-direction: column;
+          padding: 1.5em;
+          max-height: 100%;
+
+          .image-card {
+            cursor: pointer;
+            display: flex;
+            flex: 1 1;
+            max-height: 10vh;
+            min-width: 300px;
+            margin: 1em;
+            border-radius: 10px;
+            background-color: #c73e1d;
+            background-image: linear-gradient(
+              315deg,
+              #c73e1d 0%,
+              #a23b72 37%,
+              #2e86ab 100%
+            );
+
+            .preview-image {
+              flex: 1 1;
+              border-radius: 0px 10px 10px 0;
+              overflow: hidden;
+              background-size: cover;
+              background-position: center;
+            }
+
+            .preview-text {
+              display: flex;
+              flex-direction: column;
+              flex: 3 1;
+              justify-content: center;
+              padding: 1.5em;
+            }
+          }
+
+          .no-gps-card {
+            opacity: 0.3;
+            cursor: not-allowed !important;
+          }
+        }
+      }
+    }
+
+    .image-info-container {
+      flex: 1 1;
+
+      .highlight-container {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        .highlight-image-container {
+          flex: 1 1;
+          background-color: rgb(28, 30, 54);
+          margin-bottom: 1.5em;
+          max-height: 40vh;
+          display: flex;
+          justify-content: center;
+          border-radius: 30px;
+
+          .highlight-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+          }
+
+          .highlight-image-loading {
+            width: 100%;
+            height: 40vh;
+            background: #eee;
+            background: linear-gradient(
+              110deg,
+              #ececec 8%,
+              #f5f5f5 18%,
+              #ececec 33%
+            );
+            border-radius: 5px;
+            background-size: 200% 100%;
+            animation: 1.5s shine linear infinite;
+          }
+        }
+
+        .highlight-exif {
+          display: flex;
+          flex-direction: column;
+          background-color: rgb(170, 171, 173);
+          flex: 1 1;
+          padding: 1.5em;
+          border: 2px solid rgb(110, 110, 110);
+
+          .exif-header {
+            margin-bottom: -20px;
+          }
+
+          .exif-body {
+            margin-bottom: -15px;
+          }
+
+          .exif-container {
+            margin-bottom: 40px;
+            margin-top: 15px;
+          }
+
+          .exif-title {
+            padding: 0 10px 0 10px;
+            position: relative;
+            display: inline-block;
+            background-color: rgb(170, 171, 173);
+            color: white;
+            left: 15%;
+            top: -18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
